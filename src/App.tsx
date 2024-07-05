@@ -92,9 +92,9 @@ function App() {
           total={searchValue ? 0 : 1000}
         />
       ) : (
-        <TitleSection text="App source code" size="24px" />
+        <TitleSection text="No coins to display" size="36px" />
       )}
-      <TitleSection text="No coins to display" size="36px" />
+      <TitleSection text="App source code" size="24px" />
       <CodeEditor value={code} onChange={setCode} />
     </Flex>
   );
