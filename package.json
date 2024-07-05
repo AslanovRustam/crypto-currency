@@ -10,7 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@uiw/codemirror-theme-vscode": "^4.23.0",
+    "@uiw/react-codemirror": "^4.23.0",
+    "antd": "^5.19.0",
+    "axios": "^1.7.2",
+    "codemirror": "^5.65.16",
+    "modern-normalize": "^2.0.0",
     "react": "^18.3.1",
+    "react-codemirror2": "^8.0.0",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {

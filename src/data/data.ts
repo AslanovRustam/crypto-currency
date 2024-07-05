@@ -1,3 +1,16 @@
+import { Currency, Sort } from "../types/interfaces";
+
+export const optionsCurrency = [
+  { value: Currency.USD, label: Currency.USD },
+  { value: Currency.EUR, label: Currency.EUR },
+];
+
+export const optionsSort = [
+  { value: Sort.descendingValue, label: Sort.descendingLabel },
+  { value: Sort.ascendingValue, label: Sort.ascendingLabel },
+];
+
+export const appCode = `
 import "modern-normalize/modern-normalize.css";
 import { useEffect, useMemo, useState } from "react";
 import { Flex, Alert } from "antd";
@@ -68,7 +81,7 @@ function App() {
     <Flex vertical gap="24px">
       <TitleSection text="Coins & Markets" size="24px" />
       {error && (
-        <Alert message={`Something went wrong, ${error}`} type="error" />
+        <Alert message={\`Something went wrong, \${error}\`} type="error" />
       )}
       <Flex gap="24px">
         <Selector
@@ -89,7 +102,6 @@ function App() {
           currency={currency}
           loading={loading}
           onChangePage={onChangePage}
-          total={searchValue ? 0 : 1000}
         />
       ) : (
         <TitleSection text="App source code" size="24px" />
@@ -101,3 +113,4 @@ function App() {
 }
 
 export default App;
+`;
