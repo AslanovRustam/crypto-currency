@@ -1,6 +1,6 @@
 import "modern-normalize/modern-normalize.css";
 import { useEffect, useMemo, useState } from "react";
-import { Flex, Alert, Layout } from "antd";
+import { Flex, Alert } from "antd";
 import Selector from "./components/Selector/Selector";
 import TitleSection from "./components/TitleSection/TitleSection";
 import TableSection from "./components/TableSection/TableSection";
