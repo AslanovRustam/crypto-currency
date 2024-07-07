@@ -4,6 +4,7 @@ import Column from "antd/es/table/Column";
 import TitleSection from "../TitleSection/TitleSection";
 import { DataType } from "../../types/interfaces";
 import defaultImage from "../../assets/no-image.png";
+import styles from "../../styles/table.module.css";
 
 interface TableSectionProps {
   data: DataType[];
@@ -35,7 +36,7 @@ const TableSection: FC<TableSectionProps> = ({
         key="name"
         title="Name"
         render={(record: DataType) => (
-          <Flex gap="16px" align="center">
+          <Flex gap="16px" align="center" className={styles.flexContainer}>
             <Image
               src={
                 typeof record.image === "string" ? record.image : defaultImage
@@ -49,21 +50,24 @@ const TableSection: FC<TableSectionProps> = ({
             />
           </Flex>
         )}
+        className={styles.column}
       />
       <Column
         key="current_price"
         title="Current Price"
         render={(record: DataType) => (
-          <Flex gap="4px">
+          <Flex gap="4px" className={styles.flexContainer}>
             <TitleSection text={record.current_price} />
             <TitleSection text={currency.toLowerCase()} />
           </Flex>
         )}
+        className={styles.column}
       />
       <Column
         key="circulating_supply"
         title="Circulating Supply"
         dataIndex="circulating_supply"
+        className={styles.column}
       />
     </Table>
   );

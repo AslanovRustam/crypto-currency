@@ -1,5 +1,6 @@
 import { Select } from "antd";
 import { IOption } from "../../types/interfaces";
+import styles from "../../styles/selector.module.css";
 
 interface SelectorProps<T> {
   defaultValue: T;
@@ -17,7 +18,7 @@ const Selector = <T extends string>({
       options={options}
       onChange={onChangeCurrency}
       defaultValue={defaultValue}
-      style={{ width: "200px" }}
+      className={styles.select}
     />
   );
 };

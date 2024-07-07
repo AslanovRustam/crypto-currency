@@ -1,6 +1,7 @@
 import type { Dispatch, FC, SetStateAction } from "react";
 import { Input } from "antd";
 import type { SearchProps } from "antd/es/input/Search";
+import styles from "../../styles/search.module.css";
 
 interface SearchComponentProps {
   setSearchValue: Dispatch<SetStateAction<string>>;
@@ -17,7 +18,7 @@ const SearchComponent: FC<SearchComponentProps> = ({ setSearchValue }) => {
       placeholder="Exact coin id"
       allowClear
       enterButton="Search"
-      style={{ width: "250px" }}
+      className={styles.search}
       onSearch={onSearch}
     />
   );

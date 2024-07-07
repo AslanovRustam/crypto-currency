@@ -1,0 +1,10 @@
+@media screen and (orientation: portrait) {
+  .column {
+    font-size: 10px;
+    text-align: center !important;
+  }
+  .flexContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

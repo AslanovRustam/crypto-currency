@@ -1,6 +1,6 @@
 import "modern-normalize/modern-normalize.css";
 import { useEffect, useMemo, useState } from "react";
-import { Flex, Alert } from "antd";
+import { Flex, Alert, Layout } from "antd";
 import Selector from "./components/Selector/Selector";
 import TitleSection from "./components/TitleSection/TitleSection";
 import TableSection from "./components/TableSection/TableSection";
@@ -9,6 +9,7 @@ import CodeEditor from "./components/Codeeditor/Codeeditor";
 import SearchComponent from "./components/Search/Search";
 import { Currency, DataType, Sort } from "./types/interfaces";
 import { appCode, optionsCurrency, optionsSort } from "./data/data";
+import styles from "./styles/app.module.css";
 
 function App() {
   const [currency, setCurrency] = useState<Currency>(Currency.USD);
@@ -70,7 +71,7 @@ function App() {
       {error && (
         <Alert message={`Something went wrong, ${error}`} type="error" />
       )}
-      <Flex gap="24px">
+      <Flex gap="24px" className={styles.filters}>
         <Selector
           defaultValue={currency}
           onChangeCurrency={onChangeCurrency}
