@@ -12,3 +12,36 @@
 body {
   margin: 8px;
 }
+
+.search {
+  width: 250px;
+}
+
+.select {
+  width: 200px;
+}
+
+.columnSmall {
+  width: 10%;
+}
+
+@media screen and (orientation: portrait) {
+  .search {
+    width: 90%;
+  }
+  .select {
+    width: 90%;
+  }
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    font-size: 10px;
+    text-align: center !important;
+  }
+  .flexContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,6 +1,0 @@
-@media screen and (orientation: portrait) {
-  .filters {
-    flex-direction: column;
-    align-items: center;
-  }
-}

@@ -1,8 +1,0 @@
-.select {
-  width: 200px;
-}
-@media screen and (orientation: portrait) {
-  .select {
-    width: 90%;
-  }
-}
